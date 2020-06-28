@@ -949,6 +949,21 @@ a:hover {
   background: #008aff;
   color: #ffffff;
 }
+
+.service-background{
+  background-image: url("./assets/img/service.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+}
+.background{
+  background-image: url("./assets/img/about-us.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .btn-app-store.theme {
   background: #008aff;
   color: #ffffff;
@@ -1152,17 +1167,20 @@ figcaption {
 
 .section {
   padding: 100px 0;
+  overflow:auto;
 }
 @media (max-width: 991px) {
   .section {
     padding-top: 70px;
     padding-bottom: 70px;
+    overflow:auto;
   }
 }
 @media (max-width: 767px) {
   .section {
     padding-top: 40px;
     padding-bottom: 40px;
+    overflow:auto;
   }
 }
 
@@ -1577,6 +1595,12 @@ figcaption {
 @media (max-width: 991px) {
   .max-width-auto {
     max-width: 100%;
+  }
+  .theme-g-bg {
+    background-image: url('./assets/img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
   }
 }
 
@@ -2084,11 +2108,14 @@ figcaption {
   background-color: transparent;
 }
 
-.theme-g-bg {
-  background-image: url('./assets/img/banner.jpg');
-  background-repeat: no-repeat;
-  background-size: auto;
-  height: 700px;
+
+@media (min-width: 992px) {
+  .theme-g-bg {
+    background-image: url('./assets/img/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:700px
+  }
 }
 
 .dark-g-bg {
@@ -2271,6 +2298,20 @@ mark,
   left: 0;
   right: 0;
   z-index: 11;
+}
+
+.min-header{
+  min-height:84px
+}
+
+.fixed-header-bar-non-home{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  background: #ffffff;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.06);
 }
 .fixed-header .fixed-header-bar {
   background: #ffffff;
