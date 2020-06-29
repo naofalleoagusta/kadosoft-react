@@ -864,6 +864,12 @@ a:hover {
   font-size: 0.75rem;
   line-height: 1;
 }
+
+.view-app{
+
+  display:inline-block;
+}
+
 .m-btn.m-btn-sm {
   padding: 0.5rem 1.25rem;
   font-size: 0.85rem;
@@ -956,6 +962,13 @@ a:hover {
   background-position: center;
   background-size: cover;
 
+}
+
+.catalog-background{
+  background-image: url("./assets/img/catalog.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .contact-us-background{

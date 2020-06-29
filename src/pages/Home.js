@@ -1,5 +1,6 @@
 import React from 'react';
 import NavLink from '../components/NavLink';
+import AppPreview from '../components/AppPreview';
 
 class Home extends React.Component {
     render() {
@@ -156,47 +157,9 @@ class Home extends React.Component {
                         </div>
 
                         <div className="portfolio-content grid-gutter-lg grid-col-3 lightbox-gallery">
-                            <div className="grid-item product fashion">
-                                <div className="portfolio-box-01">
-                                    <div className="portfolio-info">
-                                        <h5><a href="/">Momb ios App</a></h5>
-                                        <span>Broadcasting ios App</span>
-
-                                        <div className="btn-bar"><a className="m-link-white gallery-link"
-                                            href="../assets/img/1000x1000.jpg">View </a></div>
-                                    </div>
-
-                                    <div className="portfolio-img"><img alt="" src={require("../assets/img/1000x1000.jpg")} title="" /></div>
-                                </div>
-                            </div>
-
-                            <div className="grid-item branding fashion">
-                                <div className="portfolio-box-01">
-                                    <div className="portfolio-info">
-                                        <h5><a href="/">Momb ios App</a></h5>
-                                        <span>Broadcasting ios App</span>
-
-                                        <div className="btn-bar"><a className="m-link-white gallery-link"
-                                            href="../assets/img/1000x1000.jpg">View </a></div>
-                                    </div>
-
-                                    <div className="portfolio-img"><img alt="" src={require("../assets/img/1000x1000.jpg")} title="" /></div>
-                                </div>
-                            </div>
-
-                            <div className="grid-item branding photoshop">
-                                <div className="portfolio-box-01">
-                                    <div className="portfolio-info">
-                                        <h5><a href="/">Momb ios App</a></h5>
-                                        <span>Broadcasting ios App</span>
-
-                                        <div className="btn-bar"><a className="m-link-white gallery-link"
-                                            href="../assets/img/1000x1000.jpg">View </a></div>
-                                    </div>
-
-                                    <div className="portfolio-img"><img alt="" src={require("../assets/img/1000x1000.jpg")} title="" /></div>
-                                </div>
-                            </div>
+                            <AppPreview />
+                            <AppPreview />
+                            <AppPreview />
                         </div>
                     </div>
                 </section>
