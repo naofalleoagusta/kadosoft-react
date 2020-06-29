@@ -1,5 +1,7 @@
 import React from "react";
 import NavLink from "./NavLink";
+import Collapse from 'react-bootstrap/Collapse';
+import MediaQuery from "react-responsive";
 
 
 class Header extends React.Component {
@@ -9,6 +11,7 @@ class Header extends React.Component {
         this.listener = null;
         this.state = {
             status: "top",
+            open: false
         };
     }
 
@@ -30,6 +33,7 @@ class Header extends React.Component {
     componentDidUpdate() {
         document.removeEventListener("scroll", this.listener);
     }
+
     render() {
         let path = this.props.location.pathname;
         return (
@@ -41,22 +45,26 @@ class Header extends React.Component {
                                 <img alt="" className="logo-header" src={require('./../assets/img/logo.png')} title="" />
                             </NavLink>
                             <button aria-controls="navbar-main-collapse"
-                                aria-expanded="false" aria-label="Toggle navigation" className="navbar-toggler"
-                                data-target="#navbar-main-collapse" data-toggle="collapse" type="button">
+                                onClick={() => this.setState({ open: !this.state.open })}
+                                aria-expanded={this.state.open} aria-label="Toggle navigation" className="navbar-toggler"
+                                aria-controls="navbar-main-collapse" data-toggle="collapse" type="button">
+                                <span className="navbar-toggler-icon"></span>
                             </button>
-                            <div className="collapse navbar-collapse navbar-collapse-overlay" id="navbar-main-collapse">
-                                <ul className="navbar-nav ml-auto">
-                                    <li className="nav-item"><NavLink className="nav-link" href="/">Home</NavLink></li>
-                                    <li className="nav-item"><NavLink className="nav-link" href="/service">Service</NavLink></li>
-                                    <li className="nav-item"><NavLink className="nav-link" href="/catalog">Catalog</NavLink></li>
-                                    <li className="nav-item"><NavLink className="nav-link" href="/about-us">About</NavLink></li>
-                                    <li className="nav-item"><NavLink className="nav-link" href="/contact-us">Contact</NavLink></li>
-                                </ul>
-                            </div>
+                            <Collapse in={this.state.open}>
+                                <div className="navbar-collapse navbar-collapse-overlay" id="navbar-main-collapse">
+                                    <ul className="navbar-nav ml-auto" onClick={() => this.setState({ open: !this.state.open })}>
+                                        <li className="nav-item"><NavLink className="nav-link" href="/" >Home</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" href="/service">Service</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" href="/catalog">Catalog</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" href="/about-us">About</NavLink></li>
+                                        <li className="nav-item"><NavLink className="nav-link" href="/contact-us">Contact</NavLink></li>
+                                    </ul>
+                                </div>
+                            </Collapse>
                         </div>
                     </div>
                 </div>
-            </header>
+            </header >
         );
     }
 }
