@@ -33,7 +33,7 @@ class Header extends React.Component {
     render() {
         let path = this.props.location.pathname;
         return (
-            <header className={`${(path !== "/" && path !== "contact-us") && "header-height header-bg min-header"} header-nav header-dark ${this.state.status !== "top" && "fixed-header"}`}>
+            <header className={`${(path !== "/" && path !== "/contact-us") && "header-height header-bg min-header"} header-nav header-dark ${this.state.status !== "top" && "fixed-header"}`}>
                 <div className="fixed-header-bar">
                     <div className="navbar navbar-main navbar-expand-lg">
                         <div className="container">
@@ -48,9 +48,9 @@ class Header extends React.Component {
                                 <ul className="navbar-nav ml-auto">
                                     <li className="nav-item"><NavLink className="nav-link" href="/">Home</NavLink></li>
                                     <li className="nav-item"><NavLink className="nav-link" href="/service">Service</NavLink></li>
-                                    <li className="nav-item"><NavLink className="nav-link" href="catalog.html">Catalog</NavLink></li>
-                                    <li className="nav-item"><NavLink className="nav-link" href="about-us.html">About</NavLink></li>
-                                    <li className="nav-item"><NavLink className="nav-link" href="contact-us.html">Contact</NavLink></li>
+                                    <li className="nav-item"><NavLink className="nav-link" href="/catalog">Catalog</NavLink></li>
+                                    <li className="nav-item"><NavLink className="nav-link" href="/about-us">About</NavLink></li>
+                                    <li className="nav-item"><NavLink className="nav-link" href="/contact-us">Contact</NavLink></li>
                                 </ul>
                             </div>
                         </div>

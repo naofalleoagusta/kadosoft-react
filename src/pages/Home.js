@@ -149,9 +149,9 @@ class Home extends React.Component {
                         <div className="portfolio-filter-01 m-15px-t m-20px-b md-m-10px-b">
                             <ul className="filter justify-content-center nav">
                                 <li className="active" data-filter="*">All</li>
-                                <li data-filter=".branding">Mob App</li>
-                                <li data-filter=".photoshop">Web</li>
-                                <li data-filter=".fashion">Custom</li>
+                                <li data-filter=".branding">Web Dev</li>
+                                <li data-filter=".photoshop">E-Commerce</li>
+                                <li data-filter=".fashion">Social Media</li>
                             </ul>
                         </div>
 

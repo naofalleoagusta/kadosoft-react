@@ -957,6 +957,21 @@ a:hover {
   background-size: cover;
 
 }
+
+.contact-us-background{
+  background-image: url("./assets/img/contact-banner.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-us-background{
+  background-image: url("./assets/img/about-us.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
 .background{
   background-image: url("./assets/img/about-us.jpg");
   background-attachment: fixed;
